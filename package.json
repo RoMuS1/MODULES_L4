@@ -1,0 +1,23 @@
+{
+  "name": "modules_l4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env MODE=production node -r dotenv/config app.js dotenv_config_path=.env.production",
+    "start": "cross-env MODE=development node -r dotenv/config app.js dotenv_config_path=.env.development",
+    "deploy": "cross-env MODE=domain node -r dotenv/config app.js dotenv_config_path=.env.domain",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
